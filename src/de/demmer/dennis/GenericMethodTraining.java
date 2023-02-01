@@ -2,12 +2,12 @@ package de.demmer.dennis;
 
 public class GenericMethodTraining {
 
-	public static int getArgumentBack(int variable) {
+	public static <T> T getArgumentBack(T variable) {
 		return variable;
 	}
 	
 
-	public static  void printArray(Integer[] array) {
+	public static <E> void printArray(E[] array) {
 		System.out.print("[");
 
 		for (int i = 0; i < array.length; i++) {
@@ -22,9 +22,9 @@ public class GenericMethodTraining {
 
 	
 	//ADVANCED!
-	public static  Integer getBiggestVariable(Integer var1, Integer var2, Integer var3) throws Exception  {
+	public static <T extends Comparable<T>> T getBiggestVariable(T var1, T var2, T var3) throws Exception  {
 	
-		Integer biggest = var1;
+		T biggest = var1;
 
 		if (var2.compareTo(biggest) > 0) {
 			biggest = var2;
