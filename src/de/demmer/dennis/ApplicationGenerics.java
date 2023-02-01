@@ -3,11 +3,21 @@ package de.demmer.dennis;
 public class ApplicationGenerics {
 
 	public static void main(String[] args) {
+		
+		System.out.println("----Generic Class:----");
+		GenericClassTraining<String> genericClassWithString = new GenericClassTraining<String>();
+		
 
+		genericClassWithString.setVar("Hallo Welt");
+		System.out.println("Var is: " + genericClassWithString.getVar());
+		
+		
+		
+		
+		
 		
 		System.out.println("----Generic Method:----");
 
-		
 		Boolean[] stringArr = { true, false, true};
 		GenericMethodTraining.printArray(stringArr);
 
@@ -27,13 +37,10 @@ public class ApplicationGenerics {
 		
 		
 
-		System.out.println("----Generic Class:----");
-		GenericClassTraining<String> genericClassWithString = new GenericClassTraining<String>();
+
 
 		
 		
-		genericClassWithString.setVar("Hallo Welt");
-		System.out.println("Var is: " + genericClassWithString.getVar());
 
 	}
 
